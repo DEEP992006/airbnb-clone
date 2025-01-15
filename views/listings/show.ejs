@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+    <p><%= listing.title %></p>
+    <p><%= listing.description %></p>
+    <p><%= listing.price %></p>
+    <p><%= listing.location %></p>
+    <p><%= listing.country %></p>
+    <img src="<%= listing.image %>" alt="">
+    <br>
+    <button><a href="http://localhost:8080/listings/<%= listing.id %>/edit">Edit</a></button>
+    <form action="http://localhost:8080/listings/<%= listing.id %>/delete?_method=delete" method="post">
+        <button>Delete</button>
+   </form>
+  
+</body>
+</html>
